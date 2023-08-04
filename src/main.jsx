@@ -6,13 +6,13 @@ import {
   RouterProvider, 
   Route 
 } from 'react-router-dom'
-import Home from './pages/Home'
+import Home, { loader as homeLoader } from './pages/Home'
 import CountryDetails from './pages/CoutryDetails'
 import Layout from './components/Layout'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route index element={<Home />}/>
+      <Route index element={<Home />} loader={homeLoader}/>
       <Route path='/country-details' element={<CountryDetails />}/>
     </Route>
   )
