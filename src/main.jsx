@@ -9,6 +9,7 @@ import {
 import Home, { loader as homeLoader } from './pages/Home'
 import CountryDetails from './pages/CoutryDetails'
 import Layout from './components/Layout'
+import './scss/main.scss'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
