@@ -5,11 +5,13 @@ const Header = ()=> {
     
     return (
         <header className="header">
-            <h1 className="logo">Where in the world</h1>
-            <button className="theme-toggler">
-                <img src={FilledMoonImg} alt="" width='20px'/>
-                <span>Dark Mode</span>
-            </button>
+            <div className="container">
+                <h1 className="header__logo">Where in the world</h1>
+                <button className="header__theme-toggler">
+                    <img src={FilledMoonImg} alt="" className="header__theme-toggler__img"/>
+                    <span className="header__theme-toggler__text">Dark Mode</span>
+                </button>
+            </div>
         </header>
     )
 }
