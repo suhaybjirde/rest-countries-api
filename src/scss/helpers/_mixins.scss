@@ -1,0 +1,17 @@
+@use './colors' as *;
+
+@mixin dark-mode() {
+    @each $name, $shades in $dark-theme-colors {
+        @each $color, $value in $shades {
+            --clr-#{$name}-#{$color}: #{$value};
+        }
+    }
+}
+
+@mixin light-mode() {
+    @each $name, $shades in $light-theme-colors {
+        @each $color, $value in $shades {
+            --clr-#{$name}-#{$color}: #{$value};
+        }
+    }
+}
