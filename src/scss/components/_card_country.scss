@@ -1,0 +1,43 @@
+.home__coutry-card-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 30px;
+
+    .country-card {
+        border-radius: 5px; 
+        overflow: hidden;
+    
+        &__img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__info {
+            padding: 1rem 1rem 2rem 1rem;
+            background-color: var(--clr-neutral-200);
+            color: var(--clr-neutral-300);
+
+            &__title {
+                font-weight: 800;
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+
+            &__detail {
+                margin-top: 5px;
+                font-size: 0.9rem;
+                strong {
+                    font-weight: 600;
+                }
+
+                span {
+                    font-weight: 300;
+                    color: var(--clr-neutral-400);
+                }
+            }
+        }
+    }
+}
+
