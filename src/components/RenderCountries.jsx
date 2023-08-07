@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Dropdown from './Dropdown'
 import searchImg from '../assets/images/search-outline-black.svg'
+import searchImgWhite from '../assets/images/search-outline-white.svg'
 import CoutryCard from './CountryCard'
 
 const RenderCountries = (LoadedCountries)=> {
@@ -28,15 +29,17 @@ const RenderCountries = (LoadedCountries)=> {
 
     return (
         <section className="home">
-            <div className="">
-                <div>
-                    <img src={searchImg} alt="" width='20px'/>
-                    <input type="text" name="search" placeholder="Search for a country..." onChange={searchCountry}/>
+            <div className="container">
+                <div className="home__nav">
+                    <div className="home__nav__input-wrapper">
+                        <img src={searchImgWhite} alt="" className="home__nav__input-wrapper__search-icon"/>
+                        <input type="text" name="search" placeholder="Search for a country..." onChange={searchCountry} className="home__nav__input-wrapper__input"/>
+                    </div>
+                    <Dropdown handleFilterChange={handleFilterChange} region={filterByRegion} />
                 </div>
-                <Dropdown handleFilterChange={handleFilterChange} region={filterByRegion} />
-            </div>
-            <div className="coutries">
-                {countriesElemenst}
+                <div className="home__coutry-card-container">
+                    {countriesElemenst}
+                </div>
             </div>
         </section>
     )
