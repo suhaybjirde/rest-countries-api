@@ -31,6 +31,9 @@ const CountryDetails = ()=> {
         return <Link to={`/country-details?country=${country.name.common}`} key={index}>{country.name.common}</Link>
     })
 
+    const countryLanguagesElements = (Object.values(country.languages))
+        .map((language, index, array) => <span>{language}{language === (array[array.length  -1]) ? '' : ','} </span>)
+
     return (
         <section className="country-details">
             <div className="container">
@@ -71,7 +74,7 @@ const CountryDetails = ()=> {
                             </div>
                             <div className="country-details__country-detail__info__props">
                                 <strong>Languages: </strong>
-                                <span>{(Object.values(country.languages)).toString()}</span>
+                                <span>{countryLanguagesElements}</span>
                             </div>
                         </div>
                         {
@@ -83,7 +86,7 @@ const CountryDetails = ()=> {
                                 </div>
                             )
                         }
-                </div>
+                    </div>
                 </article>
             </div>
         </section>
