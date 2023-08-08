@@ -7,16 +7,12 @@ import CoutryCard from './CountryCard'
 
 const RenderCountries = (LoadedCountries)=> {
     const [searchedCountry, setSearchCountry] = useState('')
-    const [searchParamas, setSearchParamas] = useSearchParams()
+    const [searchParamas] = useSearchParams()
     const filterByRegion = searchParamas.get('filter') || ''
 
     function searchCountry(event) {
         const { value } = event.target
         setSearchCountry(value)
-    }
-
-    function handleFilterChange(value) {
-        setSearchParamas(value)
     }
 
     const countriesElemenst = 
@@ -35,7 +31,7 @@ const RenderCountries = (LoadedCountries)=> {
                         <img src={searchImgWhite} alt="" className="home__nav__input-wrapper__search-icon"/>
                         <input type="text" name="search" placeholder="Search for a country..." onChange={searchCountry} className="home__nav__input-wrapper__input"/>
                     </div>
-                    <Dropdown handleFilterChange={handleFilterChange} region={filterByRegion} />
+                    <Dropdown />
                 </div>
                 <div className="home__coutry-card-container">
                     {countriesElemenst}

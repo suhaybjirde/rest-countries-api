@@ -1,10 +1,20 @@
 import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import arrowDownImg from '../assets/images/chevron-down-outline-black.svg';
 import arrowDownImgWhite from '../assets/images/chevron-down-outline-white.svg';
-const Dropdown = ({ handleFilterChange, region })=> {
+const Dropdown = ()=> {
+    const [searchParamas, setSearchParamas] = useSearchParams()
     const [isExpanded, setIsExpanded] = useState(false)
+
+    const region = searchParamas.get('filter')
+    
     const displayButtonList = {
         display: isExpanded ? 'block' : 'none'
+    }
+
+    function handleFilterChange(value) {
+        setSearchParamas(value)
+        setIsExpanded(prevExp => !prevExp)
     }
 
     function show() {
@@ -19,7 +29,6 @@ const Dropdown = ({ handleFilterChange, region })=> {
                         <button 
                             onClick={()=> {
                                 handleFilterChange({})  
-                                setIsExpanded(prevExpanded => !prevExpanded)
                             }
                         }
                         >X</button>
