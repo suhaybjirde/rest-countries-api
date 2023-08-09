@@ -1,6 +1,11 @@
+@use '../helpers/mixins' as *;
+
 .country-details {
     margin-top: 3rem;
 
+    @include media-country-detail() {
+        padding-bottom: 3rem;
+    }
     &__back-link {
         padding: 0.2rem 1.2rem;
         text-align: center;
@@ -16,10 +21,19 @@
         gap: clamp(2rem, 5vw, 50rem);
         overflow: hidden;
         
+        @include media-country-detail() {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
         &__img {
             width: 100%;
             height: 300px;
             object-fit: cover;
+
+            @include media-country-detail() {
+                object-fit: contain;
+            }
         }
         
         &__info {
@@ -59,6 +73,11 @@
 
             .two-columns {
                 columns: 2 auto;
+
+                @include media-country-detail() {
+                    columns: 1;
+                }
+                
             }
         }
     }

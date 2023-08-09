@@ -1,10 +1,16 @@
+@use '../helpers/mixins' as *;
+
 .home__coutry-card-container {
     margin-top: 3rem;
     display: grid;
-    // justify-content: center;
     grid-template-columns: repeat(auto-fit, 250px);
     column-gap: 4.1rem;
     row-gap: 2rem;
+
+    @include media-home() {
+        justify-content: center;
+        padding-bottom: 3rem;
+    }
 
     .country-card {
         border-radius: 5px; 

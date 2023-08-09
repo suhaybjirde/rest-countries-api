@@ -1,11 +1,19 @@
+@use '../helpers/mixins' as *;
+
 .home {
     margin-top: 3rem;
-
+    
     &__nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         
+        @include media-home() {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
         &__input-wrapper {
             display: flex;
             align-items: center;

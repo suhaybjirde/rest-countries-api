@@ -1,4 +1,5 @@
-@use './colors' as *;
+@use 'colors' as *;
+@use 'break_points' as *;
 
 @mixin dark-mode() {
     @each $name, $shades in $dark-theme-colors {
@@ -13,5 +14,15 @@
         @each $color, $value in $shades {
             --clr-#{$name}-#{$color}: #{$value};
         }
+    }
+}
+@mixin media-home() {
+    @media (max-width: map-get($breakpoint, home)) {
+        @content
+    }
+}
+@mixin media-country-detail() {
+    @media (max-width: map-get($breakpoint, country-detail)) {
+        @content
     }
 }
