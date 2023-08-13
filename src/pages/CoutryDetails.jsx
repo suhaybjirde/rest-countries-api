@@ -32,7 +32,7 @@ const CountryDetails = ()=> {
     })
 
     const countryLanguagesElements = (Object.values(country.languages))
-        .map((language, index, array) => <span>{language}{language === (array[array.length  -1]) ? '' : ','} </span>)
+        .map((language, index, array) => <span key={index}>{language}{language === (array[array.length  -1]) ? '' : ','} </span>)
 
     return (
         <section className="country-details">
