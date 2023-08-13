@@ -1,5 +1,10 @@
 @use '../helpers/mixins' as *;
 
+
 :root {
     @include dark-mode;
+}
+
+[data-theme="light"] {
+    @include light-mode;
 }

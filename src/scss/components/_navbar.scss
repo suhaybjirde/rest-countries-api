@@ -20,6 +20,8 @@
         gap: 8px;
         &__img {
             width: 18px;
+        }
+        .dark {
             filter: invert(1);
         }
         &__text {

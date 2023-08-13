@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useSearchParams } from "react-router-dom";
+import themeContext from "../context/ThemeContext";
 import arrowDownImg from '../assets/images/chevron-down-outline-black.svg';
 import arrowDownImgWhite from '../assets/images/chevron-down-outline-white.svg';
 const Dropdown = ()=> {
     const [searchParamas, setSearchParamas] = useSearchParams()
     const [isExpanded, setIsExpanded] = useState(false)
-
+    const { theme } = useContext(themeContext)
     const region = searchParamas.get('filter')
     
     const displayButtonList = {
@@ -37,7 +38,7 @@ const Dropdown = ()=> {
                 (
                     <button onClick={show} className="dropdown__status__filter-by-region">
                         <span>Filter by Region</span>
-                        <img src={arrowDownImgWhite} alt="drop down" width='20px'/>
+                        <img src={ theme === 'dark' ? arrowDownImgWhite : arrowDownImg} alt="drop down" width='20px'/>
                     </button>
                 )
             }
