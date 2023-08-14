@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { useLoaderData, defer, Await } from "react-router-dom";
 import RenderCountries from "../components/RenderCountries";
+import Skeleton from '../components/Skeleton'
 import getData from '../utils/api'
 
 export async function loader() {
@@ -11,7 +12,7 @@ const Home = ()=> {
 
 
     return (
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<Skeleton />}>
             <Await resolve={countriesPromise}>
                 {RenderCountries}
             </Await>
