@@ -3,7 +3,8 @@ $dark-theme-colors: (
         100: hsl(207, 26%, 17%), // body background color
         200: hsl(209, 23%, 22%), // elements/cards background color
         300: hsl(0, 0%, 100%), // text color
-        400: hsl(0, 0%, 85%) // card detail color
+        400: hsl(0, 0%, 85%), // card detail color
+        500: hsla(0, 0%, 0%, 0.2) // box shadow
     )
 );
 
@@ -12,6 +13,7 @@ $light-theme-colors: (
         100: hsl(0, 0%, 98%), // body background color
         200: hsl(0, 0%, 100%), // elements/cards background color
         300: hsl(200, 15%, 8%), // text color
-        400: hsl(200, 15%, 20%) // card detail color
+        400: hsl(200, 15%, 20%), // card detail color
+        500: hsla(0, 0%, 0%, 0.2) // box shadow
     )
 );
