@@ -12,7 +12,7 @@ dist
 dist-ssr
 design
 *.local
-*.md
+
 
 
 # Editor directories and files
