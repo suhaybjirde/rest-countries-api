@@ -12,8 +12,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [rest-countries-api]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-with-react-and-scss-MsYaop8H6R))
+- Live Site URL: [World Countries]([https://your-live-site-url.com](https://world-countriescom.netlify.app/))
 
 
 
